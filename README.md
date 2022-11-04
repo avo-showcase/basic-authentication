@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo demos how to use basic authentication with Avo.
 
-Things you may want to cover:
+## Approach
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Extend `Avo::ApplicationController` with the `BasicAuth` concern
+1. The concern uses `http_basic_authenticate_with` to use basic auth
+1. The concern stores the user in the `Current` model
